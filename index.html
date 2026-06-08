@@ -293,16 +293,38 @@ footer{
 </head>
 
 <body>
-    <audio id="bgMusic" loop>
-    <source src="blue.mp3" type="audio/mpeg">
-    Your browser does not support audio playback.
-</audio>
+    <audio id="bgMusic" src="hajar janma.mp3" loop></audio>
+
+<script>
+let started = false;
+
+document.addEventListener("click", () => {
+    if (started) return;
+    started = true;
+
+    const music = document.getElementById("bgMusic");
+
+    // wait 3 seconds after click
+    setTimeout(() => {
+
+        // go to 2:18 (138 sec)
+        music.currentTime = 20;
+
+        music.volume = 0.6;
+
+        music.play().catch(err => {
+            console.log("Playback blocked:", err);
+        });
+
+    }); // delay in milliseconds
+});
+</script>
 
 <div class="bg"></div>
 <div class="hearts" id="hearts"></div>
 
 <div class="welcome">
-    Happy 11 Months Lajuuu ❤️
+    CLICK BABYYY FASTTT ❤️
 </div>
 
 <section class="hero">
@@ -472,15 +494,15 @@ footer{
 </footer>
 
 <script>
-    document.addEventListener("click", () => {
+function startMusicOnce() {
     const music = document.getElementById("bgMusic");
+    music.play().catch(() => {});
+    document.removeEventListener("click", startMusicOnce);
+}
 
-    if (music.paused) {
-        music.play().catch(err => {
-            console.log("Audio play blocked:", err);
-        });
-    }
-}, { once: true });
+document.addEventListener("click", startMusicOnce);
+document.addEventListener("scroll", startMusicOnce);
+document.addEventListener("keydown", startMusicOnce);
 
 function openLetter(){
     document.getElementById("letter")
