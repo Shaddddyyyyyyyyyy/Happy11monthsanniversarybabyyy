@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy 11 Months My Lajuuu ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --pink:#ff5d92;
+    --pink-light:#ff8eb6;
+    --light:#fff7fa;
+    --text:#5f4350;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    color:var(--text);
+    overflow-x:hidden;
+    background:#ffeef5;
+}
+
+/* Background */
+
+.bg{
+    position:fixed;
+    inset:0;
+    z-index:-2;
+
+    background:
+        url("1.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+/* Floating Hearts */
+
+.hearts{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:-1;
+}
+
+.heart{
+    position:absolute;
+    animation:floatUp linear forwards;
+}
+
+@keyframes floatUp{
+    from{
+        transform:translateY(100vh) scale(.4);
+        opacity:0;
+    }
+
+    20%{
+        opacity:1;
+    }
+
+    to{
+        transform:translateY(-120px) scale(1.5);
+        opacity:0;
+    }
+}
+
+/* Hero */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero-content{
+    max-width:900px;
+}
+
+h1{
+    font-family:'Great Vibes',cursive;
+    font-size:clamp(4rem,8vw,7rem);
+    color:var(--pink);
+    text-shadow:0 0 20px rgba(255,93,146,.25);
+}
+
+.subtitle{
+    margin-top:15px;
+    font-size:1.2rem;
+}
+
+.couple-name{
+    margin-top:25px;
+    font-size:1.8rem;
+    color:var(--pink);
+    font-weight:600;
+}
+
+.scroll{
+    margin-top:30px;
+    color:var(--pink);
+    animation:bounce 2s infinite;
+}
+
+@keyframes bounce{
+    50%{
+        transform:translateY(10px);
+    }
+}
+
+/* Container */
+
+.container{
+    width:min(1100px,92%);
+    margin:auto;
+}
+
+/* Glass Cards */
+
+.card{
+    background:rgba(255, 183, 206, 0.8);
+    backdrop-filter:blur(18px);
+    border-radius:30px;
+    padding:40px;
+    margin:40px 0;
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+}
+
+.section-title{
+    text-align:center;
+    color:var(--pink);
+    margin-bottom:25px;
+}
+
+.message{
+    text-align:center;
+    line-height:2;
+    font-size:1.05rem;
+}
+
+/* Countdown */
+
+.countdown{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.time{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    background:white;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.time h3{
+    color:var(--pink);
+    font-size:2rem;
+}
+
+/* Button */
+
+.center{
+    text-align:center;
+}
+
+.btn{
+    border:none;
+    padding:15px 35px;
+    border-radius:50px;
+    cursor:pointer;
+    color:white;
+    font-size:1rem;
+    background:linear-gradient(45deg,var(--pink),var(--pink-light));
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+/* Letter */
+
+.letter{
+    max-height:0;
+    overflow:hidden;
+    transition:1s;
+}
+
+.letter.show{
+    max-height:2000px;
+    margin-top:25px;
+}
+
+/* Welcome Banner */
+
+.welcome{
+    position:fixed;
+    top:20px;
+    left:50%;
+    transform:translateX(-50%);
+    background:white;
+    color:var(--pink);
+    padding:15px 30px;
+    border-radius:50px;
+    box-shadow:0 10px 30px rgba(0,0,0,.12);
+    z-index:999;
+    animation:fadeOut 5s forwards;
+}
+
+@keyframes fadeOut{
+    0%,70%{
+        opacity:1;
+    }
+
+    100%{
+        opacity:0;
+        visibility:hidden;
+    }
+}
+
+/* Gallery */
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.photo{
+    overflow:hidden;
+    border-radius:25px;
+    height:320px;
+}
+
+.photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.4s;
+}
+
+.photo:hover img{
+    transform:scale(1.08);
+}
+
+footer{
+    text-align:center;
+    padding:40px;
+    color:#8d6775;
+}
+
+@media(max-width:768px){
+
+    .card{
+        padding:25px;
+    }
+
+    .time{
+        width:100px;
+        height:100px;
+    }
+
+    .time h3{
+        font-size:1.6rem;
+    }
+}
+</style>
+
+</head>
+
+<body>
+    <audio id="bgMusic" loop>
+    <source src="blue.mp3" type="audio/mpeg">
+    Your browser does not support audio playback.
+</audio>
+
+<div class="bg"></div>
+<div class="hearts" id="hearts"></div>
+
+<div class="welcome">
+    Happy 11 Months Lajuuu ❤️
+</div>
+
+<section class="hero">
+    <div class="hero-content">
+
+```
+    <h1>Happy 11 Months My babyy My Lajuuuu ❤️</h1>
+
+    <p class="subtitle">
+        11 beautiful months filled with love, happiness, memories, and countless smiles and tears.😭
+    </p>
+
+    <div class="couple-name">
+        Aalu ko Pakoda ❤️ Lajuuuuuu
+    </div>
+
+    <div class="scroll">
+        ↓ Scroll Down ↓
+    </div>
+
+</div>
+```
+
+</section>
+
+<div class="container">
+
+```
+<div class="card">
+    <h2 class="section-title">To My Lajuuu 🌷</h2>
+
+    <p class="message">
+        My Dearest Lajuuu ❤️
+        <br><br>
+
+        These 11 months have been the most beautiful chapter of my life.
+        Thank you for every smile, every laugh, every late-night conversation,
+        and every memory we have created together.😘😘😘
+
+        <br><br>
+
+        You are my comfort, my happiness, my safe place,
+        and the best thing that has ever happened to me.❤️
+
+        <br><br>
+
+        Happy 11 Months Babyyyyy ❤️
+
+        <br><br>
+
+        Forever Yours,
+        <br>
+        Aalu ko Pakoda 🥔😘❤️
+    </p>
+</div>
+
+<div class="card">
+    <h2 class="section-title">
+        Countdown To Our 1 Year Anniversary 🎉
+    </h2>
+
+    <div class="countdown">
+
+        <div class="time">
+            <h3 id="days">0</h3>
+            <p>Days</p>
+        </div>
+
+        <div class="time">
+            <h3 id="hours">0</h3>
+            <p>Hours</p>
+        </div>
+
+        <div class="time">
+            <h3 id="minutes">0</h3>
+            <p>Minutes</p>
+        </div>
+
+        <div class="time">
+            <h3 id="seconds">0</h3>
+            <p>Seconds</p>
+        </div>
+
+    </div>
+</div>
+
+<div class="card">
+    <h2 class="section-title">Our Beautiful Memories 📸</h2>
+
+    <div class="gallery">
+
+        <div class="photo">
+            <img src="1.jpg" alt="Memory 1">
+        </div>
+
+        <div class="photo">
+            <img src="2.jpg" alt="Memory 2">
+        </div>
+
+    </div>
+</div>
+
+<div class="card center">
+
+    <h2 class="section-title">
+        A Secret Letter 💌
+    </h2>
+
+    <button class="btn" onclick="openLetter()">
+        Open Babyyyy ❤️
+    </button>
+
+    <div class="letter" id="letter">
+
+        <p class="message">
+
+            My Sweet Lajuuu ❤️
+
+            <br><br>
+
+            You are the most beautiful present of my lifeeeeee Babyyyy,
+            I will forever be by your sidee ikkuuuu no matter whattttt😘
+            You are my happy place,my peace and my world ikkuuuu🌍
+            You are my 11:11 wish babyyyy 💫 
+            when ever 11:11 hits you aare the first one who comes to my mind ikkuuu its for us only 😘<br>
+            <br>
+            Ani don't you dare say anything unnecessary about yourself nii tya ikkuuuuu risauxu ni ma pheri😤😤😤<br>
+            You are the most perfect girl in my eyes babyyyyy so don't you dare say anything rubbish about my woman😤<br>
+            You are my woamn don't you dare be insecure ni tyaaaa bujhyouuu mark my words aba dekhii😤😤<br>
+            I LOVEEEEEE YOUUUUU TO THE MOON AND BACK BABYYYYY 😘😘😘😘😘😘😘❤️❤️❤️❤️❤️❤️❤️❤️❤️
+
+            <br><br>
+
+            Thank you for being the most beautiful part of my life.
+
+            <br><br>
+
+            Every day with you feels special.
+            Every memory with you becomes precious.
+
+            <br><br>
+
+            I LOVEEEEEEEEEEE YOUUUUUUUUUUU SO SO MUCHHH MERO PYAROOO GIRLFIEEE MY WIFEYYYY MY BUDIIIIII❤️
+
+            <br><br>
+
+            Happy 11 Months My Love My Babyyyy ❤️
+
+            <br><br>
+
+            Forever & Always,
+            <br>
+
+            Your Aalu ko Pakoda 🥔❤️
+
+        </p>
+
+    </div>
+
+</div>
+```
+
+</div>
+
+<footer>
+    Made with ❤️ by Aalu ko Pakoda for Lajuuu 🌸
+</footer>
+
+<script>
+    document.addEventListener("click", () => {
+    const music = document.getElementById("bgMusic");
+
+    if (music.paused) {
+        music.play().catch(err => {
+            console.log("Audio play blocked:", err);
+        });
+    }
+}, { once: true });
+
+function openLetter(){
+    document.getElementById("letter")
+        .classList.toggle("show");
+}
+
+/* Floating Hearts */
+
+const heartContainer =
+    document.getElementById("hearts");
+
+function createHeart(){
+
+    const icons =
+    ["❤","💕","💖","💘","🌸","✨"];
+
+    const heart =
+    document.createElement("div");
+
+    heart.className = "heart";
+
+    heart.innerHTML =
+        icons[Math.floor(
+            Math.random()*icons.length
+        )];
+
+    heart.style.left =
+        Math.random()*100 + "vw";
+
+    heart.style.fontSize =
+        (15 + Math.random()*25) + "px";
+
+    heart.style.animationDuration =
+        (6 + Math.random()*6) + "s";
+
+    heartContainer.appendChild(heart);
+
+    setTimeout(()=>{
+        heart.remove();
+    },12000);
+}
+
+setInterval(createHeart,500);
+
+/* Countdown */
+
+const anniversaryDate =
+    new Date("2026-07-09T00:00:00");
+
+function updateCountdown(){
+
+    const now = new Date();
+    const diff = anniversaryDate - now;
+
+    if(diff <= 0){
+
+        document.getElementById("days").textContent = "0";
+        document.getElementById("hours").textContent = "0";
+        document.getElementById("minutes").textContent = "0";
+        document.getElementById("seconds").textContent = "0";
+
+        return;
+    }
+
+    document.getElementById("days").textContent =
+        Math.floor(diff/(1000*60*60*24));
+
+    document.getElementById("hours").textContent =
+        Math.floor((diff/(1000*60*60))%24);
+
+    document.getElementById("minutes").textContent =
+        Math.floor((diff/(1000*60))%60);
+
+    document.getElementById("seconds").textContent =
+        Math.floor((diff/1000)%60);
+}
+
+updateCountdown();
+setInterval(updateCountdown,1000);
+
+</script>
+
+</body>
+</html>
